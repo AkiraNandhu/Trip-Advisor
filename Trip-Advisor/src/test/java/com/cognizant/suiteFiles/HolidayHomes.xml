@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="HolidayHomes">
+<test name="verification test">
+	<groups>
+		<run>
+			<include name="HolidayHomes"/>
+		</run>
+	</groups>
+	
+	<classes>
+		<class name="com.cognizant.tests.testScenario2.TC21_FetchHolidaysWithDates"/>
+  		<class name="com.cognizant.tests.testScenario2.TC22_FetchHolidayHomesWithoutDates"/>
+  		<class name="com.cognizant.tests.testScenario5.TC51_FetchHolidaysHomesAllFilters"/>
+  		
+	</classes>
+
+</test>
+</suite>
