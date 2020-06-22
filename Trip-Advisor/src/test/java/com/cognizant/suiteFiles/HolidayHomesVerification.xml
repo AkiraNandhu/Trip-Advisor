@@ -9,18 +9,18 @@
 	</groups>
 	
 	<classes>
-		<class name="com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion"/>
-  		<!-- <class name="com.cognizant.tests.testScenario1.TC12_VerifyHolidayHomesViaMoreTab"/>
+		<!-- <class name="com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion"/>
+  		<class name="com.cognizant.tests.testScenario1.TC12_VerifyHolidayHomesViaMoreTab"/>
   		<class name="com.cognizant.tests.testScenario1.TC13_SearchBarHolidayHomes"/>
   		<class name="com.cognizant.tests.testScenario1.TC14_VerifyWithDifferentLocationName"/>
   		
   		<class name="com.cognizant.tests.testScenario3.TC31_CheckGuestButton"/>
-  		<class name="com.cognizant.tests.testScenario3.TC32_GuestCountVerification"/>
+  		<class name="com.cognizant.tests.testScenario3.TC32_GuestCountVerification"/> -->
    		
   		<class name="com.cognizant.tests.testScenario4.TC41_SortByFilter"/>
   		<class name="com.cognizant.tests.testScenario4.TC42_AmenitiesBasedFilter"/>
 		<class name="com.cognizant.tests.testScenario4.TC43_SuitabilityBasedFilter"/>
-		<class name="com.cognizant.tests.testScenario4.TC44_ClearFilters"/>  -->
+		<class name="com.cognizant.tests.testScenario4.TC44_ClearFilters"/>  
 		
 	</classes>
 

@@ -5,6 +5,8 @@ import java.io.IOException;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -24,6 +26,8 @@ import com.cognizant.utilities.ScreenShots;
 
 public class TC14_VerifyWithDifferentLocationName extends DriverSetup
 {
+	CommonFunction commonFunction;
+	
 	String strClassName=this.getClass().getSimpleName();
 	String imagePath=System.getProperty("user.dir")+"\\src\\test\\resources\\screenShots\\"+strClassName+".png";
 	String[] data= {"Nairobi","Chennai","chn"};
@@ -42,7 +46,8 @@ public class TC14_VerifyWithDifferentLocationName extends DriverSetup
 		//div[@id='HEADING']/h1
 		commonFunction.click(HomePage.txtboxLocation);
 		commonFunction.click(HomePage.tabHolidayHomes);
-			
+		
+		FindRentals.txtboxLocationName.clear();
 		commonFunction.setElementValue(FindRentals.txtboxLocationName, locationName);
 		commonFunction.click(FindRentals.btnfindRental);
 		String strLocationName=commonFunction.getElementValue(HolidayHomes.locationTitle);
@@ -66,6 +71,7 @@ public class TC14_VerifyWithDifferentLocationName extends DriverSetup
 		
 		ExcelUtilities.excelStatusReport(strClassName, status);
 		Assert.assertEquals(true,status);
+		driver.get(baseUrl);
 	}
 	
 	public void displayDetails() throws InterruptedException
@@ -85,7 +91,7 @@ public class TC14_VerifyWithDifferentLocationName extends DriverSetup
 		
 	}
 	
-	CommonFunction commonFunction;
+	
 	
 	@Test(dataProvider="LocationName data",groups= {"SmokeTest"})
 	public void fetchHolidayHomes(String locationName) throws InterruptedException, IOException 
@@ -100,6 +106,13 @@ public class TC14_VerifyWithDifferentLocationName extends DriverSetup
 		provideDetails(locationName);
 		
 		//displayDetails();		
+	}
+	
+	@BeforeMethod
+	public void reloadWebpage()
+	{
+		System.out.println("url :"+baseUrl);
+		driver.get(baseUrl);
 	}
 
 

@@ -1,19 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="SmokeSuite">
-<test name="Holiday homes verification test">
-	<groups>
-		<run>
-			<include name="SmokeTest"/>
-		</run>
-	</groups>
+	<parameter name="environment" value="grid"></parameter>
+	<parameter name="browser" value="chrome"></parameter>
+	<!-- <parameter name="browser" value="firefox"></parameter> -->
 	
-	<classes>
-		<class name="com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking"/>
-		<class name="com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking"/>
-		<class name="com.cognizant.tests.testScenario6.TC63_CheckSearchButton"/>
-		
-	</classes>
 
-</test>
+		<test name="Holiday homes verification test in Chrome ">
+			
+			<groups>
+				<run>
+					<include name="SmokeTest"/>
+				</run>
+			</groups>
+			
+			<classes>
+				<class name="com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking"/>
+				<class name="com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking"/>
+				<class name="com.cognizant.tests.testScenario6.TC63_CheckSearchButton"/>
+				
+			</classes>
+		
+		</test> 
+		
+		<!-- <test name="Holiday homes verification test in Firefox">
+			
+			<groups>
+				<run>
+					<include name="SmokeTest"/>
+				</run>
+			</groups>
+			
+			<classes>
+				<class name="com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking"/>
+				<class name="com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking"/>
+				<class name="com.cognizant.tests.testScenario6.TC63_CheckSearchButton"/>
+				
+			</classes>
+		
+		</test> -->
 </suite>

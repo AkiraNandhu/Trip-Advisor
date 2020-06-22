@@ -5,11 +5,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 
 public class ExcelUtilities
@@ -18,6 +21,7 @@ public class ExcelUtilities
 	static XSSFSheet sheet;
 	static XSSFRow row;
 	static XSSFCell cell;
+	static int crusie_row=0;
 
 	
 	//Gets Excel data
@@ -103,7 +107,6 @@ public class ExcelUtilities
 			 {
 				 XSSFRow row= sheet.getRow(i);
 				 String cell=row.getCell(1).getStringCellValue();
-				 //cell="TC64_FetchCruiseDetails";
 				 if(cell.equalsIgnoreCase(testCaseName))
 				 {
 					 row.createCell(2).setCellValue(resultStatus);
@@ -122,5 +125,7 @@ public class ExcelUtilities
 			e.printStackTrace();
 		}
 	}
+	
+
 
 }

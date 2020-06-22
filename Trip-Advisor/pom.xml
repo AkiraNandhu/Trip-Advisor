@@ -3,12 +3,16 @@
 	<groupId>com.mindBenders</groupId>
 	<artifactId>Trip-Advisor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
+				<configuration> 
 				<source>1.6></source>
 				<target>1.6</target></configuration>
 			</plugin>
@@ -18,10 +22,12 @@
 				<version>2.18.1</version>
 				<configuration>
 					<suiteXmlFiles><!--  TestNG suite XML files -->
-						<suiteXmlFiles>src\test\java\com\cognizant\suiteFiles\HolidayHomesVerification.xml</suiteXmlFiles>
+						<suiteXmlFiles>src\test\java\com\cognizant\suiteFiles\CruiseVerification.xml</suiteXmlFiles>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
+			
+			
 		</plugins>
 	</build>
 	<dependencies>
@@ -88,4 +94,6 @@
 			    <version>3.0.0-M4</version>
 			</dependency>
 	</dependencies>
+
+	
 </project>

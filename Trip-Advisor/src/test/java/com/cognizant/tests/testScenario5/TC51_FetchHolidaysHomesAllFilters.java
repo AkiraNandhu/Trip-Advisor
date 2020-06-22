@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -107,9 +108,10 @@ public class TC51_FetchHolidaysHomesAllFilters extends DriverSetup
 			commonFunction.click(HolidayHomes.btnGuestCount);
 		
 		//System.out.println(commonFunction.getElementValue(HolidayHomes.txtGuest));
-	
 		
-		boolean result=commonFunction.checkingGuest(HolidayHomes.matchSleeps,noOfGuest);
+		commonFunction.click(HolidayHomes.btnApplyGuestCount);
+		
+		/*boolean result=commonFunction.checkingGuest(HolidayHomes.matchSleeps,noOfGuest);
 		
 		Assert.assertEquals(true, result);
 		if(result)
@@ -117,7 +119,7 @@ public class TC51_FetchHolidaysHomesAllFilters extends DriverSetup
 		else
 		{
 			testCase.log(Status.FAIL, "Mismatch data displayed");
-		}
+		}*/
 
 
 		
@@ -129,7 +131,7 @@ public class TC51_FetchHolidaysHomesAllFilters extends DriverSetup
 		//Display top 5 holiday homes based on specifications(Location,check-in,check-out dates)
 		testCase.log(Status.INFO, "Displays holiday homes");
 		boolean status=commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomeNames);
-		commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomePrice);
+		//commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomePrice);
 		if(status)
 			testCase.log(Status.PASS, "Diaplayed Correct Holiday Homes details");
 		else
@@ -139,6 +141,7 @@ public class TC51_FetchHolidaysHomesAllFilters extends DriverSetup
 			
 			testCase.addScreenCaptureFromPath(imagePath);
 		}
+		
 		ExcelUtilities.excelStatusReport(strClassName, status);
 
 	}
@@ -153,7 +156,7 @@ public class TC51_FetchHolidaysHomesAllFilters extends DriverSetup
 	
 	
 	@Test(dataProvider="TripAdvisor data",groups= {"HolidayHomes"})
-	public void fetchHolidayHomes(String locationName,String check_in,Double noOfDays,Double guestCount,String sortType,String suitability,String amenities,Double amount) throws InterruptedException, IOException 
+	public void fetchHolidayHomes(String locationName,String check_in,Double noOfDays,Double guestCount,String sortType,String suitability,String amenities) throws InterruptedException, IOException 
 	{
 		testCase=extentReport.createTest(strClassName+" :Fetching Holiday homes with aLl filters");
 		PageFactory.initElements(driver, HomePage.class);
@@ -168,14 +171,25 @@ public class TC51_FetchHolidaysHomesAllFilters extends DriverSetup
 		
 		provideDetails(locationName,noOfDays);
 		
+		checkGuestCount(guestCount);
 	
 		choosingSuitability(suitability);
 		//choosingSortby();
 		choosingAmenities(amenities);
 		
-		checkGuestCount(guestCount);
+		
 		displayDetails();
 		
+		reloadWebpage();
+		
+	}
+	
+	public void reloadWebpage()
+	{
+		System.out.println("url :"+baseUrl);
+		driver.get(baseUrl);
+		driver.manage().deleteAllCookies();
+		driver.navigate().refresh();
 	}
 	
 	

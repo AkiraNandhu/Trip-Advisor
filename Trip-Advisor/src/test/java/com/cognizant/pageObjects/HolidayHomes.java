@@ -47,8 +47,13 @@ public class HolidayHomes
 	public static List<WebElement> lstHolidayHomeNames;
 	
 	
-	@FindBy(xpath="//div[@class='vr-srp-propertyCard-pieces-Commerce__neighborhoodRowContainer--23-_E']")
-	public static List<WebElement> lstHolidayHomePrice;
+	@FindBy(xpath="//div[contains(text(),'per night') and contains(@class,'vr-srp-propertyCard-pieces-Commerce__pricePeriodText--3Ix4g')]/preceding::div[1]")
+	public static List<WebElement> lstHolidayHomePricePerDay;
+	
+	@FindBy(xpath="//div[contains(text(),'nights')]")
+	public static List<WebElement> lstHolidayHomePriceTotal;
+	
+	
 	
 	@FindBy(xpath="//li[@class='yJ4mfBYR']/div")
 	public static List<WebElement> chosenFilters;
@@ -75,7 +80,10 @@ public class HolidayHomes
 	public static WebElement btnGuestCount;
 	
 	
-	@FindBy(xpath="//div[contains(text(),'Sleeps')]")
+	@FindBy(xpath="//button[contains(@text(),'Apply') or contains(@class,'ui_button primary fullwidth')]")
+	public static WebElement btnApplyGuestCount;
+	
+	@FindBy(xpath="//div[contains(text(),'sleeps')]")
 	public static List<WebElement> matchSleeps;
 	
 	

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeSuite]">
+  <parameter name="environment" value="grid"/>
+  <parameter name="browser" value="firefox"/>
+  <test thread-count="5" name="Holiday homes verification test in Chrome (failed)">
+    <groups>
+      <run>
+        <include name="SmokeTest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking">
+        <methods>
+          <include name="startApplication"/>
+          <include name="driverSetup"/>
+          <include name="fetchCruises"/>
+          <include name="closeDriverSetup"/>
+          <include name="endApplication"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking -->
+      <class name="com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking">
+        <methods>
+          <include name="startApplication"/>
+          <include name="fetchCruises"/>
+          <include name="driverSetup"/>
+          <include name="closeDriverSetup"/>
+          <include name="endApplication"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking -->
+      <class name="com.cognizant.tests.testScenario6.TC63_CheckSearchButton">
+        <methods>
+          <include name="startApplication"/>
+          <include name="driverSetup"/>
+          <include name="closeDriverSetup"/>
+          <include name="fetchCruises"/>
+          <include name="endApplication"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario6.TC63_CheckSearchButton -->
+    </classes>
+  </test> <!-- Holiday homes verification test in Chrome (failed) -->
+</suite> <!-- Failed suite [SmokeSuite] -->

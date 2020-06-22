@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [HolidayHomes]">
+  <test thread-count="5" name="verification test(failed)">
+    <groups>
+      <run>
+        <include name="HolidayHomes"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.cognizant.tests.testScenario2.TC21_FetchHolidaysWithDates">
+        <methods>
+          <include name="startApplication"/>
+          <include name="driverSetup"/>
+          <include name="closeDriverSetup"/>
+          <include name="endApplication"/>
+          <include name="fetchHolidayHomes"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario2.TC21_FetchHolidaysWithDates -->
+    </classes>
+  </test> <!-- verification test(failed) -->
+</suite> <!-- Failed suite [HolidayHomes] -->

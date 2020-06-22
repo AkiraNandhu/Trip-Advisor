@@ -1,27 +1,27 @@
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario6\TC62_CruiseDropdownChecking.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\utilities\DriverSetup.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario3\TC32_GuestCountVerification.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\pageObjects\CruiseDetails.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\utilities\ExcelUtilities.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\pageObjects\HolidayHomes.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\businessFunctionality\CommonFunction.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario4\TC42_AmenitiesBasedFilter.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\pageObjects\CruisesSelection.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\businessFunctionality\DatePicker.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario6\TC64_FetchCruiseDetails.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario1\TC13_SearchBarHolidayHomes.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario1\TC11_CheckAutoSuggestion.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario2\TC22_FetchHolidayHomesWithoutDates.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario6\TC61_CruiseButtonChecking.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario1\TC12_VerifyHolidayHomesViaMoreTab.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario2\TC21_FetchHolidaysWithDates.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario6\TC63_CheckSearchButton.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario3\TC31_CheckGuestButton.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario4\TC43_SuitabilityBasedFilter.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario4\TC41_SortByFilter.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario5\TC51_FetchHolidaysHomesAllFilters.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario4\TC44_ClearFilters.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\pageObjects\FindRentals.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario1\TC14_VerifyWithDifferentLocationName.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\utilities\ScreenShots.java
-C:\Users\New\CTS Workspace\Trip-Advisor\src\test\java\com\cognizant\pageObjects\HomePage.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario1\TC14_VerifyWithDifferentLocationName.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\pageObjects\FindRentals.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\businessFunctionality\DatePicker.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario2\TC21_FetchHolidaysWithDates.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\utilities\ExcelUtilities.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario1\TC13_SearchBarHolidayHomes.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario3\TC32_GuestCountVerification.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\businessFunctionality\CommonFunction.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario2\TC22_FetchHolidayHomesWithoutDates.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\utilities\DriverSetup.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario6\TC64_FetchCruiseDetails.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario1\TC12_VerifyHolidayHomesViaMoreTab.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\pageObjects\CruisesSelection.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\pageObjects\CruiseDetails.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\pageObjects\HomePage.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario1\TC11_CheckAutoSuggestion.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\pageObjects\HolidayHomes.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario4\TC42_AmenitiesBasedFilter.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario4\TC43_SuitabilityBasedFilter.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario3\TC31_CheckGuestButton.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario4\TC44_ClearFilters.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario6\TC62_CruiseDropdownChecking.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario6\TC63_CheckSearchButton.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario6\TC61_CruiseButtonChecking.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario4\TC41_SortByFilter.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\utilities\ScreenShots.java
+C:\Users\New\git\Trip-Advisor\Trip-Advisor\src\test\java\com\cognizant\tests\testScenario5\TC51_FetchHolidaysHomesAllFilters.java

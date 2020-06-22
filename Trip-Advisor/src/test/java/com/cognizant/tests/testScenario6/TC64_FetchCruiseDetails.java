@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -24,6 +25,8 @@ public class TC64_FetchCruiseDetails extends DriverSetup
 	
 	String strClassName=this.getClass().getSimpleName();
 	String imagePath=System.getProperty("user.dir")+"\\src\\test\\resources\\screenShots\\"+strClassName+".png";
+	
+	String result[];int size=0;
 
 	
 	@DataProvider(name="Cruise data")
@@ -63,10 +66,13 @@ public class TC64_FetchCruiseDetails extends DriverSetup
 		
 		testCase.log(Status.INFO, "Verifying Title");
 
+		tabs=new ArrayList<String>(driver.getWindowHandles());
 		
 		driver.switchTo().window(tabs.get(1));
 		
 		String title=commonFunction.getElementValue(CruiseDetails.heading);
+		
+		//System.out.println(title);
 		
 		if(title.contains(cruiseShip))
 		{
@@ -95,11 +101,17 @@ public class TC64_FetchCruiseDetails extends DriverSetup
 		System.out.println("Display Cruise details");
 
 		System.out.println(commonFunction.getElementValue(CruiseDetails.cruiseDetails)); 
+		
+		result[size]=commonFunction.getElementValue(CruiseDetails.cruiseDetails);
+		System.out.println(size+" :"+result[size]);
+		//ExcelUtilities.writeResultInExcel(CruiseDetails.cruiseDetails);
+		size++;
 		testCase.log(Status.PASS, "Displayed Cruise Details");
-
-		/*driver.close();
-		driver.switchTo().window(tabs.get(0));
-		driver.navigate().forward();	*/
+		
+		reloadWebpage();
+		
+		
+		
 	}
 
 
@@ -115,7 +127,7 @@ public class TC64_FetchCruiseDetails extends DriverSetup
 		testCase=extentReport.createTest(strClassName+" :Fetching Cruise details");
 
 		commonFunction=new CommonFunction(driver);
-		tabs=new ArrayList<String>(driver.getWindowHandles());
+		
 		
 		searchFor();
 		
@@ -124,4 +136,12 @@ public class TC64_FetchCruiseDetails extends DriverSetup
 		displayDetails();
 		
 	}
-}
+	
+	public void reloadWebpage()
+	{
+		driver.close();
+		driver.switchTo().window(tabs.get(0));
+		driver.get(baseUrl);
+		
+	}
+} 

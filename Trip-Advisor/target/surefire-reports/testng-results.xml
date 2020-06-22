@@ -1,36 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="4" total="7" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeSuite" duration-ms="85523" started-at="2020-06-17T14:15:26 IST" finished-at="2020-06-17T14:16:52 IST">
+  <suite name="SmokeSuite" duration-ms="256487" started-at="2020-06-22T12:09:48 IST" finished-at="2020-06-22T12:14:05 IST">
     <groups>
       <group name="SmokeTest">
-        <method signature="TC11_CheckAutoSuggestion.fetchHolidayHomes()[pri:0, instance:com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion@1deb50e]" name="fetchHolidayHomes" class="com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion"/>
+        <method signature="TC61_CruiseButtonChecking.fetchCruises()[pri:0, instance:com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking@1341870]" name="fetchCruises" class="com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking"/>
+        <method signature="TC62_CruiseDropdownChecking.fetchCruises()[pri:0, instance:com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking@153f17c]" name="fetchCruises" class="com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking"/>
+        <method signature="TC63_CheckSearchButton.fetchCruises()[pri:0, instance:com.cognizant.tests.testScenario6.TC63_CheckSearchButton@17d0008]" name="fetchCruises" class="com.cognizant.tests.testScenario6.TC63_CheckSearchButton"/>
       </group> <!-- SmokeTest -->
     </groups>
-    <test name="Holiday homes verification test" duration-ms="85523" started-at="2020-06-17T14:15:26 IST" finished-at="2020-06-17T14:16:52 IST">
-      <class name="com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion">
-        <test-method status="PASS" signature="driverSetup()[pri:0, instance:com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion@1deb50e]" name="driverSetup" is-config="true" duration-ms="85232" started-at="2020-06-17T14:14:01 IST" finished-at="2020-06-17T14:15:26 IST">
+    <test name="Holiday homes verification test in Chrome " duration-ms="256487" started-at="2020-06-22T12:09:48 IST" finished-at="2020-06-22T12:14:05 IST">
+      <class name="com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking">
+        <test-method status="PASS" signature="driverSetup(java.lang.String, java.lang.String)[pri:0, instance:com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking@1341870]" name="driverSetup" is-config="true" duration-ms="53875" started-at="2020-06-22T12:08:54 IST" finished-at="2020-06-22T12:09:48 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[grid]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverSetup -->
-        <test-method status="PASS" signature="startApplication()[pri:0, instance:com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion@1deb50e]" name="startApplication" is-config="true" duration-ms="23873" started-at="2020-06-17T14:15:26 IST" finished-at="2020-06-17T14:15:50 IST">
+        <test-method status="PASS" signature="startApplication()[pri:0, instance:com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking@1341870]" name="startApplication" is-config="true" duration-ms="54121" started-at="2020-06-22T12:09:48 IST" finished-at="2020-06-22T12:10:42 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApplication -->
-        <test-method status="PASS" signature="fetchHolidayHomes()[pri:0, instance:com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion@1deb50e]" name="fetchHolidayHomes" duration-ms="61476" started-at="2020-06-17T14:15:50 IST" finished-at="2020-06-17T14:16:52 IST">
+        <test-method status="PASS" signature="fetchCruises()[pri:0, instance:com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking@1341870]" name="fetchCruises" duration-ms="81591" started-at="2020-06-22T12:10:42 IST" finished-at="2020-06-22T12:12:04 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fetchHolidayHomes -->
-        <test-method status="PASS" signature="endApplication()[pri:0, instance:com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion@1deb50e]" name="endApplication" is-config="true" duration-ms="3" started-at="2020-06-17T14:16:52 IST" finished-at="2020-06-17T14:16:52 IST">
+        </test-method> <!-- fetchCruises -->
+        <test-method status="PASS" signature="endApplication()[pri:0, instance:com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking@1341870]" name="endApplication" is-config="true" duration-ms="0" started-at="2020-06-22T12:12:04 IST" finished-at="2020-06-22T12:12:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endApplication -->
-        <test-method status="PASS" signature="closeDriverSetup()[pri:0, instance:com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion@1deb50e]" name="closeDriverSetup" is-config="true" duration-ms="6703" started-at="2020-06-17T14:16:52 IST" finished-at="2020-06-17T14:16:59 IST">
+        <test-method status="PASS" signature="closeDriverSetup()[pri:0, instance:com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking@1341870]" name="closeDriverSetup" is-config="true" duration-ms="4179" started-at="2020-06-22T12:14:05 IST" finished-at="2020-06-22T12:14:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriverSetup -->
-      </class> <!-- com.cognizant.tests.testScenario1.TC11_CheckAutoSuggestion -->
-    </test> <!-- Holiday homes verification test -->
+      </class> <!-- com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking -->
+      <class name="com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking">
+        <test-method status="PASS" signature="startApplication()[pri:0, instance:com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking@153f17c]" name="startApplication" is-config="true" duration-ms="28038" started-at="2020-06-22T12:12:04 IST" finished-at="2020-06-22T12:12:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startApplication -->
+        <test-method status="PASS" signature="fetchCruises()[pri:0, instance:com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking@153f17c]" name="fetchCruises" duration-ms="51240" started-at="2020-06-22T12:12:32 IST" finished-at="2020-06-22T12:13:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchCruises -->
+        <test-method status="PASS" signature="endApplication()[pri:0, instance:com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking@153f17c]" name="endApplication" is-config="true" duration-ms="1" started-at="2020-06-22T12:13:23 IST" finished-at="2020-06-22T12:13:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endApplication -->
+      </class> <!-- com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking -->
+      <class name="com.cognizant.tests.testScenario6.TC63_CheckSearchButton">
+        <test-method status="PASS" signature="startApplication()[pri:0, instance:com.cognizant.tests.testScenario6.TC63_CheckSearchButton@17d0008]" name="startApplication" is-config="true" duration-ms="25380" started-at="2020-06-22T12:13:23 IST" finished-at="2020-06-22T12:13:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startApplication -->
+        <test-method status="PASS" signature="fetchCruises()[pri:0, instance:com.cognizant.tests.testScenario6.TC63_CheckSearchButton@17d0008]" name="fetchCruises" duration-ms="15955" started-at="2020-06-22T12:13:49 IST" finished-at="2020-06-22T12:14:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchCruises -->
+        <test-method status="PASS" signature="endApplication()[pri:0, instance:com.cognizant.tests.testScenario6.TC63_CheckSearchButton@17d0008]" name="endApplication" is-config="true" duration-ms="1" started-at="2020-06-22T12:14:05 IST" finished-at="2020-06-22T12:14:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endApplication -->
+      </class> <!-- com.cognizant.tests.testScenario6.TC63_CheckSearchButton -->
+    </test> <!-- Holiday homes verification test in Chrome  -->
   </suite> <!-- SmokeSuite -->
 </testng-results>

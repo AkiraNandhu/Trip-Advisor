@@ -34,6 +34,7 @@ public class TC41_SortByFilter extends DriverSetup
 
 		commonFunction.setElementValue(FindRentals.txtboxLocationName, "Nairobi"); 
 		
+		FindRentals.dtpCheckIn.clear();
 		//Choosing check-in check-out date
 		datePicker.ClickTomorrowCheckInDate();
 		

@@ -48,12 +48,14 @@ public class TC22_FetchHolidayHomesWithoutDates extends DriverSetup
 		
 	}
 	
-	public void displayDetails() throws IOException
+	public void displayDetails() throws IOException 
 	{
 		//Display top 5 holiday homes based on specifications(Location,check-in,check-out dates)
 		testCase.log(Status.INFO, "Displays holiday homes");
 
 		boolean status=commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomeNames);
+		
+		
 		if(status)
 		{
 			testCase.log(Status.PASS,"Displayed exact Holiday Homes details");
@@ -72,7 +74,7 @@ public class TC22_FetchHolidayHomesWithoutDates extends DriverSetup
 	
 	
 	@Test(groups= {"HolidayHomes"})
-	public void fetchHolidayHomes() throws InterruptedException, IOException 
+	public void fetchHolidayHomes() throws IOException  
 	{
 		System.out.println("Fetching Holiday homes without dates");
 		PageFactory.initElements(driver, HomePage.class);

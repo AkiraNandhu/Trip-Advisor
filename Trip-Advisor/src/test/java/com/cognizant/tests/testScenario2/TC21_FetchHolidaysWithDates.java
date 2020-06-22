@@ -1,7 +1,5 @@
 package com.cognizant.tests.testScenario2;
 
-
-
 import java.io.IOException;
 
 import org.openqa.selenium.support.PageFactory;
@@ -77,13 +75,16 @@ public class TC21_FetchHolidaysWithDates extends DriverSetup
 	
 	
 	
-	public void displayDetails() 
+	public void displayDetails() throws InterruptedException 
 	{
 		
 		//Display top 5 holiday homes based on specifications(Location,check-in,check-out dates)
 		testCase.log(Status.INFO, "Displays holiday homes");
 		status=commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomeNames);
-		commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomePrice);
+		commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomePricePerDay);
+		commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomePriceTotal);
+		
+		//ExcelUtilities.writeResultInExcel(HolidayHomes.lstHolidayHomeNames, HolidayHomes.lstHolidayHomePricePerDay, HolidayHomes.lstHolidayHomePriceTotal);
 
 		ExcelUtilities.excelStatusReport(strClassName, status);
 		
@@ -91,7 +92,7 @@ public class TC21_FetchHolidaysWithDates extends DriverSetup
 	
 	
 	@Test(groups= {"HolidayHomes"})
-	public void fetchHolidayHomes() throws IOException 
+	public void fetchHolidayHomes() throws IOException, InterruptedException 
 	{
 		testCase=extentReport.createTest(strClassName+" :Fetching Holiday homes with check-in & check-out  dates");
 		PageFactory.initElements(driver, HomePage.class);
@@ -106,7 +107,7 @@ public class TC21_FetchHolidaysWithDates extends DriverSetup
 		
 		provideDetails();
 		
-		checkDateChosen();
+		//checkDateChosen();
 		
 		displayDetails();
 		

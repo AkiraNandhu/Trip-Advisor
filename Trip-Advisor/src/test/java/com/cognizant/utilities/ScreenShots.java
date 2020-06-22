@@ -11,12 +11,13 @@ public  class ScreenShots extends DriverSetup
 {
 	public static void captureScreenShot(String fileName) 
 	{
-		String FilePath=System.getProperty("user.dir")+"\\src\\com\\cognizant\\screenShots\\"+fileName+".png";
+		System.out.println("In screenshot");
+		String FilePath=System.getProperty("user.dir")+"\\src\\test\\resources\\screenShots\\"+fileName+".png";
 		TakesScreenshot screenShot =((TakesScreenshot)driver);
 		File sourceFile=screenShot.getScreenshotAs(OutputType.FILE);
 		
 		File destinationFile=new File(FilePath);
-		try {
+		try  {
 			FileHandler.copy(sourceFile, destinationFile);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
