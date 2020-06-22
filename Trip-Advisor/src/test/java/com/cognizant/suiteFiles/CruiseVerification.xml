@@ -5,7 +5,6 @@
 	<parameter name="browser" value="chrome"></parameter>
 	<!-- <parameter name="browser" value="firefox"></parameter> -->
 	
-
 		<test name="Holiday homes verification test in Chrome ">
 			
 			<groups>
