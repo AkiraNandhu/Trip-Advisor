@@ -1,3 +1,8 @@
+/*
+ * Team Name : Mind Benders
+ * This file includes Functions related to Data driven in excel
+ * This achieve code re-useability
+ */
 package com.cognizant.utilities;
 
 import java.io.File;
@@ -84,6 +89,7 @@ public class ExcelUtilities
 	}
 	
 	
+	//Get Status (PAss/Fail) of test case and update in excel
 	public static void excelStatusReport(String testCaseName, boolean status) 
 	{
 		String filePath=System.getProperty("user.dir")+"\\src\\test\\java\\com\\cognizant\\utilities\\Excel_StatusReport.xlsx";
@@ -126,6 +132,37 @@ public class ExcelUtilities
 		}
 	}
 	
-
+	//Write the Result into the excel file
+	public static  void writeExcelResult(String sheetName,String[] result,int column)
+	{
+		String filePath=System.getProperty("user.dir")+"\\src\\test\\java\\com\\cognizant\\utilities\\Excel_ResultReport.xlsx";
+		
+		try
+		{
+			FileInputStream file=new FileInputStream(new File(filePath));
+			XSSFWorkbook workbook = new XSSFWorkbook(file);
+	        XSSFSheet sheet = workbook.getSheet(sheetName);
+	        int totalRow=1;
+	        
+	        for(int i=0;i<result.length;i++)
+	        {
+	        	XSSFRow row= sheet.createRow(totalRow);
+	        	row.createCell(column).setCellValue(result[i]);
+	        	totalRow++;
+	        	
+	        }
+	        file.close();
+			FileOutputStream fileOutputStream=new FileOutputStream(new File(filePath));
+			workbook.write(fileOutputStream);
+			fileOutputStream.close();
+			workbook.close();
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+			
+	}
 
 }

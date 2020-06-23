@@ -1,3 +1,8 @@
+/*
+ * Team Name : Mind Benders
+ * Test Scenario ID :TS2
+ * Test Case ID :TC22
+ */
 package com.cognizant.tests.testScenario2;
 
 import java.io.IOException;
@@ -18,9 +23,9 @@ import com.cognizant.utilities.ScreenShots;
 /*
  * Test Scenario ID :TS21
  * Test Case ID :TC22
- */
+*/
 
-
+ 
 public class TC22_FetchHolidayHomesWithoutDates extends DriverSetup
 {
 	CommonFunction commonFunction;
@@ -29,7 +34,7 @@ public class TC22_FetchHolidayHomesWithoutDates extends DriverSetup
 	
 	public void searchFor()
 	{
-		//Choosing holidayhomes option
+		//Choosing holiday homes option
 		testCase.log(Status.INFO, "Clicking Holiday homes");
 
 		commonFunction.click(HomePage.txtboxLocation);
@@ -50,11 +55,13 @@ public class TC22_FetchHolidayHomesWithoutDates extends DriverSetup
 	
 	public void displayDetails() throws IOException 
 	{
+		String strHolidayHomeNames[]=new String[5];
+		
 		//Display top 5 holiday homes based on specifications(Location,check-in,check-out dates)
 		testCase.log(Status.INFO, "Displays holiday homes");
 
 		boolean status=commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomeNames);
-		
+		strHolidayHomeNames=commonFunction.getHolidayHomes(HolidayHomes.lstHolidayHomeNames);
 		
 		if(status)
 		{
@@ -68,6 +75,7 @@ public class TC22_FetchHolidayHomesWithoutDates extends DriverSetup
 						
 			testCase.addScreenCaptureFromPath(imagePath);
 		}
+		ExcelUtilities.writeExcelResult("TC22_FetchWithoutDates",strHolidayHomeNames,0);
 		ExcelUtilities.excelStatusReport(strClassName, status);
 	}
 	
@@ -76,7 +84,7 @@ public class TC22_FetchHolidayHomesWithoutDates extends DriverSetup
 	@Test(groups= {"HolidayHomes"})
 	public void fetchHolidayHomes() throws IOException  
 	{
-		System.out.println("Fetching Holiday homes without dates");
+		//"Fetching Holiday homes without dates"
 		PageFactory.initElements(driver, HomePage.class);
 		PageFactory.initElements(driver, FindRentals.class);
 		PageFactory.initElements(driver, HolidayHomes.class);

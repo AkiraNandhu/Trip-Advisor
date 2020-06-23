@@ -1,3 +1,8 @@
+/*
+ * Team Name : Mind Benders
+ * Test Scenario ID :TS6
+ * Test Case ID :TC61
+ */
 package com.cognizant.tests.testScenario6;
 
 import java.io.IOException;

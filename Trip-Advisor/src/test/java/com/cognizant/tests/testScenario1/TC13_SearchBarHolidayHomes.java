@@ -1,3 +1,8 @@
+/*
+ * Team Name : Mind Benders
+ * Test Scenario ID :TS11
+ * Test Case ID :TC31
+ */
 package com.cognizant.tests.testScenario1;
 
 import java.io.IOException;
@@ -14,7 +19,6 @@ import com.cognizant.pageObjects.HomePage;
 import com.cognizant.utilities.DriverSetup;
 import com.cognizant.utilities.ExcelUtilities;
 import com.cognizant.utilities.ScreenShots;
-
 
 
 public class TC13_SearchBarHolidayHomes extends DriverSetup

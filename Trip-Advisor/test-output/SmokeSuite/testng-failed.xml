@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeSuite]">
   <parameter name="environment" value="grid"/>
-  <parameter name="browser" value="firefox"/>
+  <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="Holiday homes verification test in Chrome (failed)">
     <groups>
       <run>

@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.cognizant.tests.testScenario6.TC64_FetchCruiseDetails">
+      <class name="com.cognizant.tests.testScenario5.TC51_FetchHolidaysHomesAllFilters">
         <methods>
           <include name="startApplication"/>
           <include name="driverSetup"/>
+          <include name="fetchHolidayHomes" invocation-numbers="0 1 2"/>
           <include name="closeDriverSetup"/>
           <include name="endApplication"/>
-          <include name="fetchCruises" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- com.cognizant.tests.testScenario6.TC64_FetchCruiseDetails -->
+      </class> <!-- com.cognizant.tests.testScenario5.TC51_FetchHolidaysHomesAllFilters -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

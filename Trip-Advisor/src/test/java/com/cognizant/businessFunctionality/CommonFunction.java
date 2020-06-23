@@ -1,3 +1,8 @@
+/*
+ * Team Name : Mind Benders
+ * This file has a common functions used in a project 
+ * This achieve code re-useability
+ */
 package com.cognizant.businessFunctionality;
 
 import java.util.List;
@@ -19,7 +24,7 @@ public class CommonFunction
 	public CommonFunction(WebDriver driver)
 	{
 		this.driver=driver;
-		wait = new WebDriverWait(driver, 20);
+		wait = new WebDriverWait(driver, 30);
 		jse=(JavascriptExecutor)driver;
 
 	}
@@ -52,19 +57,21 @@ public class CommonFunction
 		return webelement.size();
 	}
 	
-	//Get the element value stored in a list of webelement 
-	public boolean getHolidayHomeNames(List<WebElement> webelement)
+	
+	
+	//Get the element value stored in a list of webelement
+	public String[] getHolidayHomes(List<WebElement> webelement)
 	{
-		boolean status=false;
-		int j;
-		System.out.println("Top 5 Holiday Homes based on your wish");
+		wait.until(ExpectedConditions.visibilityOfAllElements(webelement));
+		String data[]=new String[5];
+		
+		//Top 5 Holiday Homes based on your wish";
 		for(int i=0;i<5;i++)
 		{
-			j=i+1;
-			System.out.println(j+" :"+webelement.get(i).getText());
-			status=true;
+			
+			data[i]=webelement.get(i).getText();
 		}
-		return status;
+		return data;	
 		
 	}
 	
@@ -91,6 +98,22 @@ public class CommonFunction
 		}
 		
 		return filtersData;
+		
+	}
+	
+	//Get the element value stored in a list of webelement 
+	public boolean getHolidayHomeNames(List<WebElement> webelement)
+	{
+		boolean status=false;
+		
+		//"Top 5 Holiday Homes based on your wish";
+		for(int i=0;i<5;i++)
+		{
+			
+			webelement.get(i).getText();
+			status=true;
+		}
+		return status;
 		
 	}
 	

@@ -1,3 +1,9 @@
+/*
+ * Team Name : Mind Benders
+ * Test Scenario ID :TS4
+ * Test Case ID :TC41
+ */
+
 package com.cognizant.tests.testScenario4;
 
 import org.openqa.selenium.support.PageFactory;
@@ -51,8 +57,7 @@ public class TC41_SortByFilter extends DriverSetup
 		commonFunction.click(HolidayHomes.btnSortby);
 		commonFunction.click(HolidayHomes.rdoTravellerRating);
 		testCase.log(Status.INFO, "sort by traveller rating is choosen succesfully ");
-
-
+		
 		ExcelUtilities.excelStatusReport(strClassName, true);
 	}
 	

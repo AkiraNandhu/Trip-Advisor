@@ -1,3 +1,8 @@
+/*
+ * Team Name : Mind Benders
+ * This file includes Functions related to configuring Driver setup with both Selenium  grid and local configuration
+ * This achieve code re-useability
+ */
 package com.cognizant.utilities;
 
 import java.io.FileInputStream;
@@ -48,6 +53,7 @@ public class DriverSetup
 	public static Object[][] data;
 	
 	
+	//Configuring Driver setup
 	@BeforeSuite(groups= {"SmokeTest","HolidayHomes","Cruise"})
 	@Parameters({ "browser", "environment" })
 	public void driverSetup(@Optional("chrome") String browser, @Optional("local") String environment) throws IOException  
@@ -55,9 +61,7 @@ public class DriverSetup
 		extentReport =new ExtentReports();
 		htmlReporter=new ExtentHtmlReporter("ExtentReport.html");
 		extentReport.attachReporter(htmlReporter);
-		
-		/*BasicConfigurator.configure();
-		System.setProperty("org.freemarker.loggerLibrary", "none");*/
+	
 
 		testCase=extentReport.createTest("Automation Started");
 		System.out.println("Browser :"+browser+" Environment :"+environment);
@@ -71,6 +75,7 @@ public class DriverSetup
 		
 	} 
 	
+	//Closing the driver
 	@AfterSuite(groups= {"SmokeTest","HolidayHomes","Cruise"})
 	public void closeDriverSetup()
 	{
@@ -78,6 +83,8 @@ public class DriverSetup
 		extentReport.flush();
 		
 	}
+	
+	//Loads Webpage with specified criteria
 	@BeforeClass(groups= {"SmokeTest","HolidayHomes","Cruise"})
  	public void startApplication() throws FileNotFoundException, IOException
 	{
@@ -91,12 +98,7 @@ public class DriverSetup
 			
 	}
 	
-	@AfterClass(groups= {"SmokeTest","HolidayHomes","Cruise"})
-	public void endApplication()
-	{
-		//System.out.println("in after Test");
-		//driver.navigate().to(baseUrl);
-	}
+	
 	
 	//Loads properties from configuration file
 	public static Properties loadPropertyFile() throws IOException
@@ -110,7 +112,7 @@ public class DriverSetup
 		
 	}
     
-	//Loads driver
+	//Loads driver for Local machine Configuration
 	public static void getDriver(String browser) throws IOException 
 	{
 		
@@ -148,6 +150,7 @@ public class DriverSetup
 	}
 	
 	
+	//Loads driver for Grid Configuration
 	public void getDriverGrid(String browser) throws IOException
 	{
 		
@@ -186,6 +189,14 @@ public class DriverSetup
 			
 		}
 		
+	}
+	
+	
+	@AfterClass(groups= {"SmokeTest","HolidayHomes","Cruise"})
+	public void endApplication()
+	{
+		//System.out.println("in after Test");
+		//driver.navigate().to(baseUrl);
 	}
 }
 

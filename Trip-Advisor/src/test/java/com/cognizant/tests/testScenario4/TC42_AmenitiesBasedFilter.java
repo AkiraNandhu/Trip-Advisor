@@ -1,3 +1,8 @@
+/*
+ * Team Name : Mind Benders
+ * Test Scenario ID :TS4
+ * Test Case ID :TC42
+ */
 package com.cognizant.tests.testScenario4;
 
 
@@ -79,7 +84,6 @@ public class TC42_AmenitiesBasedFilter extends DriverSetup
 		
 		commonFunction.click(amenitiesElement);
 		
-		//jse.executeScript("arguments[0].scrollIntoView();",HolidayHomes.chosenFilters);
 		String data[]=commonFunction.getChosenFilters(HolidayHomes.chosenFilters);
 		boolean status=false;
 		for(int i=0;i<data.length;i++)

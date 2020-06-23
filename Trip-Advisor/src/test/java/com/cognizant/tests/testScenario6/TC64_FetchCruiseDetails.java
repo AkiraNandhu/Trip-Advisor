@@ -1,10 +1,14 @@
+/*
+ * Team Name : Mind Benders
+ * Test Scenario ID :TS6
+ * Test Case ID :TC64
+ */
 package com.cognizant.tests.testScenario6;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -26,7 +30,8 @@ public class TC64_FetchCruiseDetails extends DriverSetup
 	String strClassName=this.getClass().getSimpleName();
 	String imagePath=System.getProperty("user.dir")+"\\src\\test\\resources\\screenShots\\"+strClassName+".png";
 	
-	String result[];int size=0;
+	String result[]=new String[2];
+	int size=0;
 
 	
 	@DataProvider(name="Cruise data")
@@ -54,7 +59,10 @@ public class TC64_FetchCruiseDetails extends DriverSetup
 		boolean status=false;
 		testCase.log(Status.INFO, "Choosing Cruise Line and Ship");
 
+		System.out.println("hi 1");
 		commonFunction.click(CruisesSelection.drpCruiseLine);
+		
+		System.out.println("hi 2");
 		CruisesSelection.chooseCruiseOption(cruiseLine);
 		
 		commonFunction.click(CruisesSelection.drpCruiseShip);
@@ -96,6 +104,7 @@ public class TC64_FetchCruiseDetails extends DriverSetup
 	
 	public void displayDetails()
 	{
+		int indexColumm=0;
 		
 		testCase.log(Status.INFO, "Display Cruise Details");
 		System.out.println("Display Cruise details");
@@ -104,10 +113,10 @@ public class TC64_FetchCruiseDetails extends DriverSetup
 		
 		result[size]=commonFunction.getElementValue(CruiseDetails.cruiseDetails);
 		System.out.println(size+" :"+result[size]);
-		//ExcelUtilities.writeResultInExcel(CruiseDetails.cruiseDetails);
+		
 		size++;
 		testCase.log(Status.PASS, "Displayed Cruise Details");
-		
+		ExcelUtilities.writeExcelResult(strClassName, result,indexColumm);
 		reloadWebpage();
 		
 		

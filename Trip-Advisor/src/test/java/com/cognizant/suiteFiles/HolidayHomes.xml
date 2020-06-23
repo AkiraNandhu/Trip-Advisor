@@ -9,9 +9,9 @@
 	</groups>
 	
 	<classes>
-		<class name="com.cognizant.tests.testScenario2.TC21_FetchHolidaysWithDates"/>
-  		<!-- <class name="com.cognizant.tests.testScenario2.TC22_FetchHolidayHomesWithoutDates"/>
-  		<class name="com.cognizant.tests.testScenario5.TC51_FetchHolidaysHomesAllFilters"/> -->
+		<!-- <class name="com.cognizant.tests.testScenario2.TC21_FetchHolidaysWithDates"/>
+  		<class name="com.cognizant.tests.testScenario2.TC22_FetchHolidayHomesWithoutDates"/> -->
+  		<class name="com.cognizant.tests.testScenario5.TC51_FetchHolidaysHomesAllFilters"/> 
   		
 	</classes>
 

@@ -30,7 +30,7 @@ public class CruisesSelection
 	{
 		
 		String path="//div[contains(@class,'option') and contains(text(),'"+cruiseLineShip+"')]";
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		WebElement element=driver.findElement(By.xpath(path));
 		wait.until(ExpectedConditions.visibilityOf(element));
 		element.click();

@@ -1,3 +1,8 @@
+/*
+ * Team Name : Mind Benders
+ * Test Scenario ID :TS4
+ * Test Case ID :TC43
+ */
 package com.cognizant.tests.testScenario4;
 
 import java.io.IOException;
@@ -57,7 +62,7 @@ public class TC43_SuitabilityBasedFilter extends DriverSetup
 	
 	public void choosingSuitability(String suitability) throws IOException 
 	{
-		testCase.log(Status.INFO, "Choosing Amenities filter");
+		testCase.log(Status.INFO, "Choosing Suitability filter");
 
 
 		WebElement suitabilityElement=null;

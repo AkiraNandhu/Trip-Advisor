@@ -1,3 +1,8 @@
+/*
+ * Team Name : Mind Benders
+ * Test Scenario ID :TS2
+ * Test Case ID :TC21
+ */
 package com.cognizant.tests.testScenario2;
 
 import java.io.IOException;
@@ -15,6 +20,7 @@ import com.cognizant.pageObjects.HomePage;
 import com.cognizant.utilities.DriverSetup;
 import com.cognizant.utilities.ExcelUtilities;
 import com.cognizant.utilities.ScreenShots;
+
 
 
 public class TC21_FetchHolidaysWithDates extends DriverSetup
@@ -75,18 +81,34 @@ public class TC21_FetchHolidaysWithDates extends DriverSetup
 	
 	
 	
-	public void displayDetails() throws InterruptedException 
+	public void displayDetails() throws InterruptedException, IOException 
 	{
+		String strHolidayHomeNames[]=new String[5];
+		String strHolidayHomePricePerDay[]=new String[5]; 
+		String strHolidayHomeTotalPrice[]=new String[5];
 		
 		//Display top 5 holiday homes based on specifications(Location,check-in,check-out dates)
 		testCase.log(Status.INFO, "Displays holiday homes");
-		status=commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomeNames);
-		commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomePricePerDay);
-		commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomePriceTotal);
 		
-		//ExcelUtilities.writeResultInExcel(HolidayHomes.lstHolidayHomeNames, HolidayHomes.lstHolidayHomePricePerDay, HolidayHomes.lstHolidayHomePriceTotal);
-
+		status=commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomeNames);
+		strHolidayHomeNames=commonFunction.getHolidayHomes(HolidayHomes.lstHolidayHomeNames);
+		strHolidayHomePricePerDay=commonFunction.getHolidayHomes(HolidayHomes.lstHolidayHomePricePerDay);
+		strHolidayHomeTotalPrice=commonFunction.getHolidayHomes(HolidayHomes.lstHolidayHomePriceTotal);
+		
+		ExcelUtilities.writeExcelResult(strClassName,strHolidayHomeNames,0);
+		ExcelUtilities.writeExcelResult(strClassName,strHolidayHomePricePerDay,1);
+		ExcelUtilities.writeExcelResult(strClassName,strHolidayHomeTotalPrice,2);
 		ExcelUtilities.excelStatusReport(strClassName, status);
+		
+		if(status)
+			testCase.log(Status.PASS, "Holiday Home details  are fetched ");
+		else
+		{
+			testCase.log(Status.FAIL, "Holiday Home details  are  not fetched");
+			ScreenShots.captureScreenShot(strClassName);
+			
+			testCase.addScreenCaptureFromPath(imagePath);
+		}
 		
 	}
 	

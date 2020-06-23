@@ -1,3 +1,8 @@
+/*
+ * Team Name : Mind Benders
+ * Test Scenario ID :TS5
+ * Test Case ID :TC51
+ */
 package com.cognizant.tests.testScenario5;
 
 import java.io.FileNotFoundException;
@@ -7,8 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -29,6 +33,7 @@ public class TC51_FetchHolidaysHomesAllFilters extends DriverSetup
 	
 	String strClassName=this.getClass().getSimpleName();
 	String imagePath=System.getProperty("user.dir")+"\\src\\test\\resources\\screenShots\\"+strClassName+".png";
+	boolean status;
 
 	
 	@DataProvider(name="TripAdvisor data")
@@ -125,25 +130,36 @@ public class TC51_FetchHolidaysHomesAllFilters extends DriverSetup
 		
 	}
 	
-	public void displayDetails() throws InterruptedException, IOException
+	public void displayDetails() throws InterruptedException, IOException 
 	{
+		String strHolidayHomeNames[]=new String[5];
+		String strHolidayHomePricePerDay[]=new String[5]; 
+		String strHolidayHomeTotalPrice[]=new String[5];
 		
 		//Display top 5 holiday homes based on specifications(Location,check-in,check-out dates)
 		testCase.log(Status.INFO, "Displays holiday homes");
-		boolean status=commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomeNames);
-		//commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomePrice);
+		
+		status=commonFunction.getHolidayHomeNames(HolidayHomes.lstHolidayHomeNames);
+		strHolidayHomeNames=commonFunction.getHolidayHomes(HolidayHomes.lstHolidayHomeNames);
+		strHolidayHomePricePerDay=commonFunction.getHolidayHomes(HolidayHomes.lstHolidayHomePricePerDay);
+		strHolidayHomeTotalPrice=commonFunction.getHolidayHomes(HolidayHomes.lstHolidayHomePriceTotal);
+			
+		
+		ExcelUtilities.writeExcelResult("TC51_FetchHomesAllFilters",strHolidayHomeNames,0);
+		ExcelUtilities.writeExcelResult("TC51_FetchHomesAllFilters",strHolidayHomePricePerDay,1);
+		ExcelUtilities.writeExcelResult("TC51_FetchHomesAllFilters",strHolidayHomeTotalPrice,2);
+		ExcelUtilities.excelStatusReport(strClassName, status);
+		
 		if(status)
-			testCase.log(Status.PASS, "Diaplayed Correct Holiday Homes details");
+			testCase.log(Status.PASS, "Holiday Home details  are fetched ");
 		else
 		{
-			testCase.log(Status.FAIL, "Mismatch data displayed");
+			testCase.log(Status.FAIL, "Holiday Home details  are  not fetched");
 			ScreenShots.captureScreenShot(strClassName);
 			
 			testCase.addScreenCaptureFromPath(imagePath);
 		}
 		
-		ExcelUtilities.excelStatusReport(strClassName, status);
-
 	}
 	
 	public void choosingSortby()
@@ -174,9 +190,9 @@ public class TC51_FetchHolidaysHomesAllFilters extends DriverSetup
 		checkGuestCount(guestCount);
 	
 		choosingSuitability(suitability);
+		
 		//choosingSortby();
 		choosingAmenities(amenities);
-		
 		
 		displayDetails();
 		

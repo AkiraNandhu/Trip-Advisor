@@ -1,3 +1,9 @@
+/*
+ * Team Name : Mind Benders
+ * Test Scenario ID :TS11
+ * Test Case ID :TC11
+ */
+
 package com.cognizant.tests.testScenario1;
 
 import java.io.IOException;
@@ -15,12 +21,6 @@ import com.cognizant.utilities.DriverSetup;
 import com.cognizant.utilities.ExcelUtilities;
 import com.cognizant.utilities.ScreenShots;
 
-
-
-/*
- * Test Scenario ID :TS11
- * Test Case ID :TC11
- */
 
 public class TC11_CheckAutoSuggestion extends DriverSetup 
 {

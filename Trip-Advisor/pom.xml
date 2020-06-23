@@ -23,6 +23,11 @@
 				<configuration>
 					<suiteXmlFiles><!--  TestNG suite XML files -->
 						<suiteXmlFiles>src\test\java\com\cognizant\suiteFiles\CruiseVerification.xml</suiteXmlFiles>
+						
+						
+						<!-- <suiteXmlFiles>src\test\java\com\cognizant\suiteFiles\Cruise.xml</suiteXmlFiles>
+						<suiteXmlFiles>src\test\java\com\cognizant\suiteFiles\HolidayHomes.xml</suiteXmlFiles>
+						<suiteXmlFiles>src\test\java\com\cognizant\suiteFiles\HolidayHomesVerification.xml</suiteXmlFiles> -->
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
