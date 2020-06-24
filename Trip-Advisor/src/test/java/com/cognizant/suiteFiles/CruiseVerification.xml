@@ -23,20 +23,5 @@
 		
 		</test> 
 		
-		<!-- <test name="Holiday homes verification test in Firefox">
-			
-			<groups>
-				<run>
-					<include name="SmokeTest"/>
-				</run>
-			</groups>
-			
-			<classes>
-				<class name="com.cognizant.tests.testScenario6.TC61_CruiseButtonChecking"/>
-				<class name="com.cognizant.tests.testScenario6.TC62_CruiseDropdownChecking"/>
-				<class name="com.cognizant.tests.testScenario6.TC63_CheckSearchButton"/>
-				
-			</classes>
 		
-		</test> -->
 </suite>

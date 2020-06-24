@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Cruise Test(failed)">
     <classes>
+      <class name="com.cognizant.tests.testScenario1.TC14_VerifyWithDifferentLocationName">
+        <methods>
+          <include name="startApplication"/>
+          <include name="driverSetup"/>
+          <include name="reloadWebpage"/>
+          <include name="closeDriverSetup"/>
+          <include name="endApplication"/>
+          <include name="fetchHolidayHomes" invocation-numbers="2"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario1.TC14_VerifyWithDifferentLocationName -->
+      <class name="com.cognizant.tests.testScenario4.TC41_SortByFilter">
+        <methods>
+          <include name="startApplication"/>
+          <include name="driverSetup"/>
+          <include name="fetchHolidayHomes"/>
+          <include name="closeDriverSetup"/>
+          <include name="endApplication"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario4.TC41_SortByFilter -->
+      <class name="com.cognizant.tests.testScenario4.TC42_AmenitiesBasedFilter">
+        <methods>
+          <include name="startApplication"/>
+          <include name="driverSetup"/>
+          <include name="fetchHolidayHomes"/>
+          <include name="closeDriverSetup"/>
+          <include name="endApplication"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario4.TC42_AmenitiesBasedFilter -->
       <class name="com.cognizant.tests.testScenario5.TC51_FetchHolidaysHomesAllFilters">
         <methods>
           <include name="startApplication"/>
@@ -12,6 +40,42 @@
           <include name="endApplication"/>
         </methods>
       </class> <!-- com.cognizant.tests.testScenario5.TC51_FetchHolidaysHomesAllFilters -->
+      <class name="com.cognizant.tests.testScenario3.TC32_GuestCountVerification">
+        <methods>
+          <include name="startApplication"/>
+          <include name="driverSetup"/>
+          <include name="fetchHolidayHomes"/>
+          <include name="closeDriverSetup"/>
+          <include name="endApplication"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario3.TC32_GuestCountVerification -->
+      <class name="com.cognizant.tests.testScenario1.TC12_VerifyHolidayHomesViaMoreTab">
+        <methods>
+          <include name="startApplication"/>
+          <include name="driverSetup"/>
+          <include name="closeDriverSetup"/>
+          <include name="endApplication"/>
+          <include name="fetchHolidayHomes"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario1.TC12_VerifyHolidayHomesViaMoreTab -->
+      <class name="com.cognizant.tests.testScenario4.TC43_SuitabilityBasedFilter">
+        <methods>
+          <include name="startApplication"/>
+          <include name="driverSetup"/>
+          <include name="fetchHolidayHomes"/>
+          <include name="closeDriverSetup"/>
+          <include name="endApplication"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario4.TC43_SuitabilityBasedFilter -->
+      <class name="com.cognizant.tests.testScenario4.TC44_ClearFilters">
+        <methods>
+          <include name="startApplication"/>
+          <include name="driverSetup"/>
+          <include name="closeDriverSetup"/>
+          <include name="fetchHolidayHomes"/>
+          <include name="endApplication"/>
+        </methods>
+      </class> <!-- com.cognizant.tests.testScenario4.TC44_ClearFilters -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Cruise Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

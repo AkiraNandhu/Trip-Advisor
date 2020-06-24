@@ -35,7 +35,7 @@
         <methods>
           <include name="startApplication"/>
           <include name="driverSetup"/>
-          <include name="fetchHolidayHomes" invocation-numbers="1 2"/>
+          <include name="fetchHolidayHomes" invocation-numbers="0 1 2"/>
           <include name="closeDriverSetup"/>
           <include name="endApplication"/>
         </methods>
@@ -58,15 +58,6 @@
           <include name="fetchHolidayHomes"/>
         </methods>
       </class> <!-- com.cognizant.tests.testScenario1.TC12_VerifyHolidayHomesViaMoreTab -->
-      <class name="com.cognizant.tests.testScenario2.TC21_FetchHolidaysWithDates">
-        <methods>
-          <include name="startApplication"/>
-          <include name="driverSetup"/>
-          <include name="closeDriverSetup"/>
-          <include name="endApplication"/>
-          <include name="fetchHolidayHomes"/>
-        </methods>
-      </class> <!-- com.cognizant.tests.testScenario2.TC21_FetchHolidaysWithDates -->
       <class name="com.cognizant.tests.testScenario4.TC43_SuitabilityBasedFilter">
         <methods>
           <include name="startApplication"/>
